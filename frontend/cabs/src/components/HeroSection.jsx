@@ -12,7 +12,7 @@ const HeroSection = () => {
     const section = sectionRef.current;
 
     // Initial position (hide off screen)
-    gsap.set(car, { x: -100, y: -100 });
+    gsap.set(car, { x: 100, y: 200 });
 
     const moveFollower = (e) => {
       const { left, top, width, height } = section.getBoundingClientRect();
