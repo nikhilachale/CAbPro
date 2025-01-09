@@ -15,7 +15,7 @@ app.use(cors({
 
 app.use(express.json());
 // for testing only 
-app.get((req, res) => {
+app.get("/",(req, res) => {
     res.send("Hello World");
 });
 
@@ -66,6 +66,6 @@ app.get("/rev", async (req, res) => {
 });
 
 
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+app.listen(3000, () => {
+    console.log(`Server running on port ${3000}`);
 });
