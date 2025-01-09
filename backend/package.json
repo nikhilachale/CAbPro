@@ -1,15 +1,21 @@
 {
-  "name": "procab_backend",
+  "name": "cabbro-backend",
   "version": "1.0.0",
-  "description": "cab booking backend",
+  "description": "writing a backend for the cabbro",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
-  "author": "",
+  "author": "nikhil achale",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.1",
-    "jsonwebtoken": "^9.0.2"
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.2",
+    "zod": "^3.24.1"
   }
 }

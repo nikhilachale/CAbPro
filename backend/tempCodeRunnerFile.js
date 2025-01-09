@@ -1,0 +1,3 @@
+app.use(cors({
+//     origin:"#"
+// }))
