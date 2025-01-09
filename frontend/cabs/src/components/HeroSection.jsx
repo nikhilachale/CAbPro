@@ -12,7 +12,7 @@ const HeroSection = () => {
     const section = sectionRef.current;
 
     // Initial position (hide off screen)
-    gsap.set(car, { x: 100, y: 200 });
+    gsap.set(car, { x: 100, y: 250 });
 
     const moveFollower = (e) => {
       const { left, top, width, height } = section.getBoundingClientRect();
@@ -24,7 +24,7 @@ const HeroSection = () => {
       // Prevent the car from leaving the section
       if (x > 0 && x < width && y > 0 && y < height) {
         gsap.to(car, {
-          duration: 1.3,
+          duration: 1,
           x: x - 40,  // Offset to center image
           y: y - 40,
           ease: "back.out(1.7)"
