@@ -1,5 +1,5 @@
 import React from "react";
-import Coverimg from "../images/cover.jpg";
+import logo from "../images/cabbroo.png"
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
           rel="noopener noreferrer"
           className="hover:underline"
         >
-          TheCabBro
+         <img src={logo} className="w-auto h-10"></img>
         </a>
       </h1>
 

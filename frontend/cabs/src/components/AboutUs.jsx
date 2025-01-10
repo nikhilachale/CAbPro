@@ -1,5 +1,5 @@
 import React from "react";
-import AboutImage from "../images/abt.png"; 
+import AboutImage from "../images/cabbrologo1.png"; 
 
 
 const AboutUs = () => {
