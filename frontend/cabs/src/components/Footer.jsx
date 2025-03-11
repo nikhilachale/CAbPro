@@ -18,7 +18,7 @@ const Footer = () => {
             </p>
             <p className="text-gray-300 mb-2 mt-4">Address</p>
             <p className="text-blue-400">
-              <a href="https://www.thecabbro.com">903/6 LIG Square, Indore, 452001</a>
+              <a href="https://www.thecabbro.com">76,Greater Tirupati Apartment, Geeta Bhawan, Indore, 452001</a>
             </p>
           </div>
           <div className="sm:ml-auto mt-6 sm:mt-0 w-1/3 text-left">

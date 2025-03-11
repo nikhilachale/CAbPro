@@ -9,6 +9,7 @@ import PlacesContainer from "./components/PlacesContainer";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import ReviewsPage from "./components/ ReviewsPage";
+import ContactInfo from "./components/ContactInfo";
 
 
 
@@ -25,6 +26,7 @@ function App() {
       <AboutUs/>
 
      <ReviewsPage/>
+     <ContactInfo/>
 
 
       

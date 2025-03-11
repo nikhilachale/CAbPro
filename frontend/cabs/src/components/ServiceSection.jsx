@@ -4,10 +4,10 @@ import ServiceCard from "./ServiceCard";
 const ServicesSection = () => {
   const services = [
     {
-      title: "Round Trip",
+      title: "Corporate Services",
       description:
-        "Convenient round-trip rides for your travel needs. Enjoy hassle-free journeys with a return trip included.",
-    },
+        "Dedicated pick-up and drop services for offices. Ensure smooth and reliable commutes for your employees.",
+  },
     {
       title: "One-way Trip",
       description:
