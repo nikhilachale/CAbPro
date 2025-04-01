@@ -1,58 +1,33 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
-import Car from "../images/car.png";
+
+import Form from "./Form";
 
 const HeroSection = () => {
-  const carRef = useRef(null);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const car = carRef.current;
-    const section = sectionRef.current;
-
-    // Initial position (hide off screen)
-    gsap.set(car, { x: 100, y: 250 });
-
-    const moveFollower = (e) => {
-      const { left, top, width, height } = section.getBoundingClientRect();
-      
-      // Calculate mouse position relative to the section
-      const x = e.clientX - left;
-      const y = e.clientY - top;
-
-      // Prevent the car from leaving the section
-      if (x > 0 && x < width && y > 0 && y < height) {
-        gsap.to(car, {
-          duration: 1,
-          x: x - 40,  // Offset to center image
-          y: y - 40,
-          ease: "back.out(1.7)"
-        });
-      }
-    };
-
-    // Attach event listener to the section, not window
-    section.addEventListener('mousemove', moveFollower);
-
-    return () => {
-      section.removeEventListener('mousemove', moveFollower);
-    };
-  }, []);
+  
+  
 
   return (
     <section
-      ref={sectionRef}
-      className="h-[50vh] flex flex-col items-center justify-center text-white text-center bg-blue-950 bg-cover bg-center relative overflow-hidden"
+      
+      className="h-fit flex flex-col items-center px-6 md:px-20 text-white text-center bg-blue-950 bg-cover bg-center relative overflow-hidden"
     >
-      <img
-        ref={carRef}
-        src={Car}
-        alt="Car"
-        className="h-20 pointer-events-none absolute top-0 left-0"
-      />
-      <h2 className="text-4xl font-bold">Affordable Cab Service</h2>
-      <p className="text-lg mt-2">Your destination awaits!</p>
+      <div className="text-center mb-6">
+        <h4 className="text-xl md:text-2xl font-semibold">Explore India</h4>
+        <h1 className="text-2xl md:text-4xl font-bold mt-2">Start Planning Your Dream Trip Today!</h1>
+        <p className="text-sm md:text-base font-thin mt-2">We provide one way and Round trip outstation cab accross India.</p>
+      </div>
+      <div className="w-full flex flex-col md:flex-row justify-between items-center">
+        <div className="w-full md:w-1/2 mb-6 md:mb-0 flex justify-center">
+          <Form />
+        </div>
+        <div className="w-full md:w-1/2 flex flex-col items-center relative">
+        
+          <h2 className="text-3xl md:text-4xl font-bold mt-10">Affordable Cab Service</h2>
+          <p className="text-lg mt-2">Your destination awaits!</p>
+        </div>
+      </div>
     </section>
   );
 };
