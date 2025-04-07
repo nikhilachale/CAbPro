@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import ReviewsPage from "./components/ ReviewsPage";
 import ContactInfo from "./components/ContactInfo";
+import Whatsapp from "./components/Whatsapp";
 
 
 
@@ -28,7 +29,7 @@ function App() {
      <ReviewsPage/>
      <ContactInfo/>
 
-
+   
       
       <Footer/>
     </div>

@@ -7,6 +7,7 @@ import PlacesContainer from "./components/PlacesContainer";
 
 import AboutUs from "./components/AboutUs";
 import Testimonial from './components/Testimonial';
+import Whatsapp from './components/Whatsapp';
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
 
     <PlacesContainer/>
 <Testimonial/>
+ <Whatsapp/>
     <AboutUs/>
   </>
   )

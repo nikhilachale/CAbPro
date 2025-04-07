@@ -24,7 +24,7 @@ const Form = () => {
     return (
         <form
             onSubmit={handleSubmit}
-            className="max-w-5xl w-96
+            className="max-w-5xl w-full 
              mx-auto bg-white p-8 mb-4 rounded-lg shadow-lg space-y-6"
         >
             <div>
