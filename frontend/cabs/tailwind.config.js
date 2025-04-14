@@ -5,7 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        'car-move': {
+          '0%': { left: '-4rem' },
+          '100%': { left: '100%' },
+        },
+      },
+      animation: {
+        'car-move': 'car-move 3s linear infinite',
+      },
+    },
   },
   plugins: [],
 }
