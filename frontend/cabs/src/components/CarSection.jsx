@@ -39,8 +39,8 @@ const CarSection = () => {
   ];
 
   return (
-    <section id="services" className="py-10 px-8">
-      <h2 className="text-center text-3xl font-bold mb-8">Choose Your Car</h2>
+    <section id="services" className=" my-14 py-10 px-8">
+      <h2 className="text-center text-3xl  text-yellow-500 font-bold mb-14">Choose Your Car</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {cars.map((car, index) => (
           <CarCard

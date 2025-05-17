@@ -1,11 +1,21 @@
 import React from "react";
+import { Briefcase, Navigation, MapPinned, Plane } from "lucide-react";
+
+const icons = {
+  "Corporate Services": <Briefcase className="h-6 w-6" />,
+  "One-way Trip": <Navigation className="h-6 w-6" />,
+  "Local Cab": <MapPinned className="h-6 w-6" />,
+  "Airport Transfer": <Plane className="h-6 w-6" />,
+};
 
 const ServiceCard = ({ title, description }) => {
   return (
-    <div className="bg-blue-950 text-white shadow-md rounded-3xl p-8 text-center flex flex-col items-center">
-      <h3 className="text-xl font-semibold mb-4">{title}</h3>
-      <p className="text-white mt-4 mb-6">{description}</p>
-     
+    <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100 hover:border-yellow-300 p-6 text-center flex flex-col items-center">
+      <div className="bg-yellow-100 text-yellow-500 p-3 inline-flex rounded-full mb-4">
+        {icons[title]}
+      </div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
     </div>
   );
 };
