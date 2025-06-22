@@ -22,13 +22,16 @@ const ReviewsPage = () => {
   };
 
   return (
-    <div className="bg-yellow-50 min-h-screen p-6">
-      <h1 className="text-blue-900 text-4xl text-center font-bold mb-8 underline decoration-yellow-400">
-        TheCabBro Reviews
+    <div className="bg-white min-h-screen p-6 text-neutral-900">
+      <h1 className="text-4xl font-extrabold text-center mb-10 tracking-tight">
+        <span className="text-yellow-500">TheCabBro</span>{" "}
+        <span className="text-neutral-800">Reviews</span>
       </h1>
-      <div className="bg-white shadow-lg rounded-lg p-6 max-w-3xl mx-auto mb-10">
+
+      <div className="bg-neutral-100 border border-neutral-300 shadow-md rounded-xl p-6 max-w-3xl mx-auto mb-12 transition-all duration-300 hover:shadow-amber-300/30">
         <ReviewForm onSubmit={handleReviewSubmit} />
       </div>
+
       <div className="max-w-4xl mx-auto">
         <ReviewsList reviews={reviews} />
       </div>

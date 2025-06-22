@@ -1,43 +1,55 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Testimonial = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      location: "New York",
-      image: "https://randomuser.me/api/portraits/women/11.jpg",
+      name: "Ananya Sharma",
+      location: "Delhi",
+      image: "https://randomuser.me/api/portraits/women/65.jpg",
       rating: 5,
-      comment: "The most reliable cab service I've ever used. Drivers are always on time and professional. The app is intuitive and booking is a breeze!"
+      comment:
+        "TheCabBro service is extremely reliable and affordable. Booking a cab even in peak hours has never been this easy. Highly recommended!",
     },
     {
       id: 2,
-      name: "Michael Chen",
-      location: "San Francisco",
-      image: "https://randomuser.me/api/portraits/men/22.jpg",
-      rating: 5,
-      comment: "TheCabBro has been my go-to for business travel. Their premium service is worth every penny - clean cars, courteous drivers, and always punctual."
+      name: "Raj Patel",
+      location: "Ahmedabad",
+      image: "https://randomuser.me/api/portraits/men/51.jpg",
+      rating: 4,
+      comment:
+        "Smooth booking process, polite drivers, and very clean vehicles. The app interface is simple and user-friendly. Great job by the team!",
     },
     {
       id: 3,
-      name: "Emma Wilson",
-      location: "Chicago",
-      image: "https://randomuser.me/api/portraits/women/33.jpg",
-      rating: 4,
-      comment: "I love the transparency with pricing. No surprise surge charges like other services. The drivers are friendly and the cars are always clean."
+      name: "Meera Nair",
+      location: "Kochi",
+      image: "https://randomuser.me/api/portraits/women/45.jpg",
+      rating: 5,
+      comment:
+        "I travel frequently and TheCabBro has become my go-to app. Fixed pricing, no hidden charges, and safe rides always.",
     },
     {
       id: 4,
-      name: "David Rodriguez",
-      location: "Miami",
-      image: "https://randomuser.me/api/portraits/men/44.jpg",
+      name: "Vikram Singh",
+      location: "Jaipur",
+      image: "https://randomuser.me/api/portraits/men/64.jpg",
       rating: 5,
-      comment: "As someone who travels often, I appreciate the consistency of service across different cities. TheCabBro never disappoints!"
-    }
+      comment:
+        "Professional drivers, quick customer support, and timely service. TheCabBro truly raises the bar for cab services in India.",
+    },
   ];
 
   const [currentIdx, setCurrentIdx] = useState(0);
+ const navigate = useNavigate();
+ const handleAddReviewClick = () => {
+  
+ 
+    navigate('/reviews');
+ 
+};
 
   const nextTestimonial = () => {
     setCurrentIdx((prevIdx) => (prevIdx + 1) % testimonials.length);
@@ -121,9 +133,8 @@ const Testimonial = () => {
                 <button
                   key={idx}
                   onClick={() => setCurrentIdx(idx)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    currentIdx === idx ? 'bg-yellow-500' : 'bg-gray-600 hover:bg-gray-500'
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${currentIdx === idx ? 'bg-yellow-500' : 'bg-gray-600 hover:bg-gray-500'
+                    }`}
                   aria-label={`Go to testimonial ${idx + 1}`}
                 />
               ))}
@@ -136,7 +147,19 @@ const Testimonial = () => {
             </button>
           </div>
         </div>
+
+        <div className="mt-10 flex justify-center">
+  <button
+    onClick={handleAddReviewClick}
+    className="bg-white text-yellow-500 text-2xl font-semibold py-2 px-5 rounded-lg shadow-md transition-colors duration-200"
+  >
+    Add Your Reviews
+  </button>
+</div>
+
       </div>
+     
+
     </section>
   );
 };
