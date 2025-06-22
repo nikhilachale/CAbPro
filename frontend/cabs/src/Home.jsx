@@ -22,6 +22,7 @@ function Home() {
         <hr className="border-t-2 border-yellow-500 w-4/5" />
       </div>
     <CarSection />
+    
 
     <PlacesContainer/>
 <Testimonial/>

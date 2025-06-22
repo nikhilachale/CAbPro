@@ -8,7 +8,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import Home from './Home.jsx'
 import ReviewsPage from './components/ ReviewsPage.jsx'
 import ContactInfo from './components/ContactInfo.jsx'
-import CarCard from './components/CarCard.jsx'
+
 
 const router = createBrowserRouter(
   createRoutesFromElements( 

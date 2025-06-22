@@ -10,7 +10,7 @@ const ReviewsPage = () => {
     fetch("http://localhost:3000/rev")
       .then((res) => res.json())
       .then((data) => {
-        setReviews(data);  
+        setReviews(data);
       })
       .catch((error) => {
         console.error("Failed to fetch reviews:", error);
@@ -22,13 +22,16 @@ const ReviewsPage = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen p-6">
-      <h1 className="text-blue-950 text-4xl  text-center font-semibold mb-8">
+    <div className="bg-yellow-50 min-h-screen p-6">
+      <h1 className="text-blue-900 text-4xl text-center font-bold mb-8 underline decoration-yellow-400">
         TheCabBro Reviews
       </h1>
-      <ReviewForm onSubmit={handleReviewSubmit} />
-      <ReviewsList reviews={reviews} />
-    
+      <div className="bg-white shadow-lg rounded-lg p-6 max-w-3xl mx-auto mb-10">
+        <ReviewForm onSubmit={handleReviewSubmit} />
+      </div>
+      <div className="max-w-4xl mx-auto">
+        <ReviewsList reviews={reviews} />
+      </div>
     </div>
   );
 };
