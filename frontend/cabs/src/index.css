@@ -34,9 +34,9 @@
 }
   /* Attach animations to Tailwind */
   .animate-car-move {
-    animation: car-move 3s linear forwards;
+    animation: car-move 1.6s linear forwards;
   }
   
   .animate-line-grow {
-    animation: line-grow 3s linear forwards;
+    animation: line-grow 1.6s linear forwards;
   }

@@ -5,7 +5,7 @@ const CarLoader = () => {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShow(false), 3000);
+    const timer = setTimeout(() => setShow(false), 1500);
     return () => clearTimeout(timer);
   }, []);
 
