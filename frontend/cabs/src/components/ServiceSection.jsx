@@ -27,7 +27,7 @@ const ServicesSection = () => {
 
   return (
     <section id="services" className="py-10 my-14 px-8">
-      <h2 className="text-center text-yellow-500 text-3xl font-bold mb-14">
+      <h2 className="text-center text-[#e57c35] text-3xl font-bold mb-14">
         Our Services
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

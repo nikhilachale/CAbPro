@@ -5,7 +5,7 @@ const ContactInfo = () => {
     <div className="relative min-h-screen flex items-center pt-16 pb-12 overflow-hidden bg-white">
       <div className="text-neutral-900 p-10 rounded-2xl shadow-xl max-w-2xl mx-auto w-full flex flex-col justify-center items-center text-center space-y-8 transition-all duration-300">
         {/* Business Name */}
-        <h1 className="text-4xl font-extrabold tracking-wide text-yellow-500">
+        <h1 className="text-4xl font-extrabold tracking-wide text-[#e57c35]">
           THE CAB BRO
         </h1>
 
@@ -23,7 +23,7 @@ const ContactInfo = () => {
             <span className="font-semibold">Email us at:</span>
             <a
               href="mailto:thecabbro@gmail.com"
-              className="text-yellow-600 hover:underline ml-2"
+              className="text-orange-600 hover:underline ml-2"
             >
               thecabbro@gmail.com
             </a>
@@ -33,7 +33,7 @@ const ContactInfo = () => {
             <span className="font-semibold">Call us at:</span>
             <a
               href="tel:+919111034494"
-              className="text-yellow-600 hover:underline ml-2"
+              className="text-orange-600 hover:underline ml-2"
             >
               +91 9111034494
             </a>
@@ -48,7 +48,7 @@ const ContactInfo = () => {
         {/* Call Now Button */}
         <a
   href="tel:+919111034494"
-  className="bg-yellow-500 hover:bg-yellow-600 text-white py-3 px-6 rounded-lg transition duration-300 text-lg font-semibold shadow-md animate-breathe"
+  className="bg-[#e57c35] hover:bg-orange-600 text-white py-3 px-6 rounded-lg transition duration-300 text-lg font-semibold shadow-md animate-breathe"
 >
   📞 Call Now
 </a>

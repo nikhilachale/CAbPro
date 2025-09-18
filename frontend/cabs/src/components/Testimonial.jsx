@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Star, User } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Testimonial = () => {
@@ -76,7 +76,7 @@ const Testimonial = () => {
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            What Our <span className="text-yellow-500">Riders Say</span>
+            What Our <span className="text-[#e57c35]">Riders Say</span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Don't just take our word for it – hear from our satisfied customers.
@@ -94,11 +94,9 @@ const Testimonial = () => {
                 <div key={testimonial.id} className="min-w-full px-4">
                   <div className="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700">
                     <div className="flex items-center mb-6">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-16 h-16 rounded-full object-cover mr-4 border-2 border-yellow-500"
-                      />
+                      <div className="w-16 h-16 mr-4 rounded-full bg-gray-700 flex items-center justify-center border-2 border-[#e57c35]">
+                        <User className="w-10 h-10 text-white" />
+                      </div>
                       <div>
                         <h3 className="text-xl font-semibold">{testimonial.name}</h3>
                         <p className="text-gray-400">{testimonial.location}</p>
@@ -106,7 +104,7 @@ const Testimonial = () => {
                           {[...Array(5)].map((_, i) => (
                             <Star
                               key={i}
-                              className={`w-4 h-4 ${i < testimonial.rating ? 'text-yellow-500' : 'text-gray-600'}`}
+                              className={`w-4 h-4 ${i < testimonial.rating ? 'text-[#e57c35]' : 'text-gray-600'}`}
                               fill={i < testimonial.rating ? 'currentColor' : 'none'}
                             />
                           ))}
@@ -124,7 +122,7 @@ const Testimonial = () => {
           <div className="flex justify-center mt-8 space-x-3">
             <button
               onClick={prevTestimonial}
-              className="bg-gray-800 text-white p-3 rounded-full hover:bg-yellow-500 hover:text-gray-900 transition-colors duration-200"
+              className="bg-gray-800 text-white p-3 rounded-full hover:bg-[#e57c35] hover:text-gray-900 transition-colors duration-200"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
@@ -133,7 +131,7 @@ const Testimonial = () => {
                 <button
                   key={idx}
                   onClick={() => setCurrentIdx(idx)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${currentIdx === idx ? 'bg-yellow-500' : 'bg-gray-600 hover:bg-gray-500'
+                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${currentIdx === idx ? 'bg-[#e57c35]' : 'bg-gray-600 hover:bg-gray-500'
                     }`}
                   aria-label={`Go to testimonial ${idx + 1}`}
                 />
@@ -141,7 +139,7 @@ const Testimonial = () => {
             </div>
             <button
               onClick={nextTestimonial}
-              className="bg-gray-800 text-white p-3 rounded-full hover:bg-yellow-500 hover:text-gray-900 transition-colors duration-200"
+              className="bg-gray-800 text-white p-3 rounded-full hover:bg-[#e57c35] hover:text-gray-900 transition-colors duration-200"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
@@ -151,7 +149,7 @@ const Testimonial = () => {
         <div className="mt-10 flex justify-center">
   <button
     onClick={handleAddReviewClick}
-    className="bg-white text-yellow-500 text-2xl font-semibold py-2 px-5 rounded-lg shadow-md transition-colors duration-200"
+    className="bg-white text-[#e57c35] text-2xl font-semibold py-2 px-5 rounded-lg shadow-md transition-colors duration-200"
   >
     Add Your Reviews
   </button>

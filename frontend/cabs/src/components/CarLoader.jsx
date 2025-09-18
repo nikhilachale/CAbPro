@@ -19,10 +19,10 @@ const CarLoader = () => {
         <div className="absolute top-1/2 left-0 w-full h-1 bg-gray-300 transform -translate-y-1/2 z-0" />
 
         {/* Blue progress line */}
-        <div className="absolute top-1/2 left-0 h-1 bg-yellow-500 z-10 transform -translate-y-1/2 animate-line-grow origin-left" />
+        <div className="absolute top-1/2 left-0 h-1 bg-[#e57c35] z-10 transform -translate-y-1/2 animate-line-grow origin-left" />
 
         {/* Moving Car */}
-        <FaCarSide className="text-yellow-500 text-5xl absolute z-20 animate-car-move" />
+        <FaCarSide className="text-[#e57c35] text-5xl absolute z-20 animate-car-move" />
       </div>
     </div>
   );

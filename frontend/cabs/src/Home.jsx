@@ -19,7 +19,7 @@ function Home() {
     <ServicesSection/>
      {/* Horizontal line for separation */}
       <div className="flex justify-center mt-20">
-        <hr className="border-t-2 border-yellow-500 w-4/5" />
+        <hr className="border-t-2 border-[#e57c35] w-4/5" />
       </div>
     <CarSection />
     

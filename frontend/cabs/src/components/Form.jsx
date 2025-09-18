@@ -56,7 +56,7 @@ const Form = () => {
               value={formData.fullName}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e57c35] focus:border-transparent"
             />
           </div>
 
@@ -69,7 +69,7 @@ const Form = () => {
               value={formData.mobileNumber}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e57c35] focus:border-transparent"
             />
           </div>
 
@@ -83,7 +83,7 @@ const Form = () => {
                 value={formData.pickupLocation}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e57c35] focus:border-transparent"
               />
             </div>
             <div>
@@ -94,7 +94,7 @@ const Form = () => {
                 value={formData.dropLocation}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e57c35] focus:border-transparent"
               />
             </div>
           </div>
@@ -108,7 +108,7 @@ const Form = () => {
               value={formData.pickupDate}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e57c35] focus:border-transparent"
             />
           </div>
 
@@ -121,8 +121,8 @@ const Form = () => {
                   key={cab.name}
                   className={`cursor-pointer border rounded-lg p-3 flex flex-col items-center justify-center transition-all duration-200 ${
                     formData.cabType === cab.name
-                      ? "bg-yellow-500 border-yellow-500 text-gray-900 shadow-sm"
-                      : "border-gray-300 hover:border-yellow-400"
+                      ? "bg-[#e57c35] border-[#e57c35] text-gray-900 shadow-sm"
+                      : "border-gray-300 hover:border-orange-400"
                   }`}
                 >
                   <input
@@ -148,7 +148,7 @@ const Form = () => {
           <button
             type="submit"
             disabled={submitting}
-            className={`w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-semibold py-3 px-4 rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 ${
+            className={`w-full bg-[#e57c35] hover:bg-orange-400 text-gray-900 font-semibold py-3 px-4 rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 ${
               submitting ? "opacity-70 cursor-not-allowed" : ""
             }`}
           >

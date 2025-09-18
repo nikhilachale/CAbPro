@@ -24,7 +24,7 @@ const ReviewsPage = () => {
   return (
     <div className="bg-white min-h-screen p-6 text-neutral-900">
       <h1 className="text-4xl font-extrabold text-center mb-10 tracking-tight">
-        <span className="text-yellow-500">TheCabBro</span>{" "}
+        <span className="text-[#e57c35]">TheCabBro</span>{" "}
         <span className="text-neutral-800">Reviews</span>
       </h1>
 

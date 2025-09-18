@@ -10,8 +10,8 @@ const icons = {
 
 const ServiceCard = ({ title, description }) => {
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100 hover:border-yellow-300 p-6 text-center flex flex-col items-center">
-      <div className="bg-yellow-100 text-yellow-500 p-3 inline-flex rounded-full mb-4">
+    <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100 hover:border-orange-300 p-6 text-center flex flex-col items-center">
+      <div className="bg-orange-100 text-[#e57c35] p-3 inline-flex rounded-full mb-4">
         {icons[title]}
       </div>
       <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>

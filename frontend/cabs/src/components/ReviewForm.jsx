@@ -43,7 +43,7 @@ const ReviewForm = ({ onSubmit }) => {
 
   return (
     <div className="bg-white text-neutral-900 w-full max-w-3xl p-8 rounded-xl shadow-lg mx-auto">
-      <h2 className="text-3xl font-bold mb-6 text-center text-yellow-500">
+      <h2 className="text-3xl font-bold mb-6 text-center text-[#e57c35]">
         Write a Review
       </h2>
 
@@ -99,7 +99,7 @@ const ReviewForm = ({ onSubmit }) => {
         {/* Submit */}
         <button
           type="submit"
-          className="bg-yellow-500 hover:bg-yellow-700 text-white px-6 py-2 rounded-lg transition-colors duration-200 font-semibold"
+          className="bg-[#e57c35] hover:bg-orange-700 text-white px-6 py-2 rounded-lg transition-colors duration-200 font-semibold"
         >
           Submit Review
         </button>

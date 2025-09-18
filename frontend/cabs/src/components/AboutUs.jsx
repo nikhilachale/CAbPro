@@ -1,9 +1,9 @@
 import React from "react";
-import AboutImage from "../images/LOGO.png"; 
+import AboutImage from "../images/bg.png"; 
 
 const AboutUs = () => {
   return (
-    <section className="bg-gray-900 py-12">
+    <section className="bg-white py-12">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center">
         {/* Left Side: Image */}
         <div className="md:w-1/2 flex justify-center md:justify-start">
@@ -16,10 +16,10 @@ const AboutUs = () => {
 
         {/* Right Side: Heading and Paragraph */}
         <div className="md:w-1/2 mt-8 md:mt-0 md:ml-8">
-          <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+          <h2 className="text-3xl font-bold mb-4 bg-[#e57c35] bg-clip-text text-transparent">
             About Us
           </h2>
-          <p className="text-lg 	leading-loose bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent">
+          <p className="text-lg 	leading-loose bg-[#e57c35] bg-clip-text text-transparent">
             Welcome to <strong>TheCabBro</strong>, your trusted travel partner 
             committed to providing affordable, comfortable, and reliable cab 
             services. Whether you’re traveling within the city or planning a 
