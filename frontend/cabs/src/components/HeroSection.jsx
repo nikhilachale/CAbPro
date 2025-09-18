@@ -78,7 +78,7 @@ const Hero = () => {
                     </svg>
                   ))}
                 </div>
-                <p className="text-sm text-gray-900">4.9 from 2,300+ reviews</p>
+                <p className="text-sm text-gray-900">4.9 from 1000+ reviews</p>
               </div>
             </motion.div>
           </div>
