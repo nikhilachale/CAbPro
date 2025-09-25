@@ -147,12 +147,7 @@ const Testimonial = () => {
         </div>
 
         <div className="mt-10 flex justify-center">
-  <button
-    onClick={handleAddReviewClick}
-    className="bg-white text-[#e57c35] text-2xl font-semibold py-2 px-5 rounded-lg shadow-md transition-colors duration-200"
-  >
-    Add Your Reviews
-  </button>
+  
 </div>
 
       </div>
