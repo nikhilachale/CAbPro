@@ -58,51 +58,69 @@ const ReviewForm = ({ onNewReview }) => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-lg">
-      <h2 className="text-3xl font-bold mb-6 text-center text-[#e57c35]">
+    <div className="w-full max-w-3xl mx-auto p-4 sm:p-6 bg-white rounded-xl shadow-lg">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-center text-[#e57c35] ">
         Write a Review
       </h2>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <input
-          type="text"
-          placeholder="Your Name"
-          className="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-amber-400"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <textarea
-          placeholder="Write your thoughts..."
-          className="w-full border px-4 py-2 rounded resize-none focus:ring-2 focus:ring-amber-400"
-          value={review}
-          onChange={(e) => setReview(e.target.value)}
-          rows={4}
-        />
-        <div className="flex space-x-2">
-          {[1, 2, 3, 4, 5].map((star) => (
-            <span
-              key={star}
-              onClick={() => setRating(star)}
-              className={`cursor-pointer text-3xl ${
-                star <= rating ? "text-amber-500" : "text-neutral-300"
-              }`}
-            >
-              ★
+      <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+        <div>
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="w-full border border-gray-300 px-3 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-200"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        
+        <div>
+          <textarea
+            placeholder="Write your thoughts..."
+            className="w-full border border-gray-300 px-3 sm:px-4 py-2 sm:py-3 rounded-lg resize-none text-sm sm:text-base focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-200"
+            value={review}
+            onChange={(e) => setReview(e.target.value)}
+            rows={4}
+          />
+        </div>
+        
+        <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
+          <span className="text-sm sm:text-base font-medium text-gray-700">Rating:</span>
+          <div className="flex space-x-1 sm:space-x-2 justify-center sm:justify-start">
+            {[1, 2, 3, 4, 5].map((star) => (
+              <span
+                key={star}
+                onClick={() => setRating(star)}
+                className={`cursor-pointer text-2xl sm:text-3xl transition-colors duration-200 ${
+                  star <= rating ? "text-[#e57c35]  hover:text-yellow-600" : "text-gray-300 hover:text-gray-400"
+                }`}
+              >
+                ★
+              </span>
+            ))}
+          </div>
+          {rating > 0 && (
+            <span className="text-xs sm:text-sm text-gray-600 text-center sm:text-left">
+              {rating} out of 5 stars
             </span>
-          ))}
+          )}
         </div>
 
-        <button
-          type="submit"
-          className="bg-[#e57c35] text-white px-6 py-2 rounded-lg hover:bg-orange-700"
-        >
-          Submit Review
-        </button>
+        <div className="pt-2">
+          <button
+            type="submit"
+            className="w-full sm:w-auto bg-[#e57c35]  hover:bg-yellow-600 text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
+          >
+            Submit Review
+          </button>
+        </div>
 
-        {message && <p className="text-center mt-2">{message}</p>}
+        {message && (
+          <div className="text-center mt-4 p-3 rounded-lg bg-gray-50">
+            <p className="text-sm sm:text-base">{message}</p>
+          </div>
+        )}
       </form>
-
-      
     </div>
   );
 };
