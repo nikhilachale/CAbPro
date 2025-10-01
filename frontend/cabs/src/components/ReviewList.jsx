@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const ReviewsList = () => {
   const [reviews, setReviews] = useState([]);
-  const API_URL= process.env.BACKEND_URL || "http://localhost:3000/rev"; 
+  const API_URL= import.meta.env.BACKEND_URL ; 
 
   useEffect(() => {
     fetch(API_URL)

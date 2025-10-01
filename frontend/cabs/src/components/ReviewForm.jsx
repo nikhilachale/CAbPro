@@ -7,7 +7,7 @@ const ReviewForm = ({ onNewReview }) => {
   const [message, setMessage] = useState("");
   const [reviews, setReviews] = useState([]);
 
-  const API_URL = process.env.BACKEND_URL || "http://localhost:3000/rev";
+  const API_URL = import.meta.env.BACKEND_URL|| "http://localhost:3000/rev";
 
   // Fetch reviews on mount
   useEffect(() => {
