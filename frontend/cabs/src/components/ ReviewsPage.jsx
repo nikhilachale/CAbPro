@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import ReviewForm from "./ReviewForm";
 import ReviewsList from "./ReviewList";
-  const API_URL= import.meta.env.BACKEND_URL || "http://localhost:3000/rev"; 
+const API_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000/rev";
 const ReviewsPage = () => {
   const [reviews, setReviews] = useState([]);
   const [showForm, setShowForm] = useState(false);
