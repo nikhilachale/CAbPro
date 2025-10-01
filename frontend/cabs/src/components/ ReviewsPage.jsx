@@ -2,13 +2,13 @@
 import React, { useState, useEffect } from "react";
 import ReviewForm from "./ReviewForm";
 import ReviewsList from "./ReviewList";
-
+  const API_URL= process.env.BACKEND_URL || "http://localhost:3000/rev"; 
 const ReviewsPage = () => {
   const [reviews, setReviews] = useState([]);
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:3000/rev")
+    fetch(API_URL)
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);

@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 
 const ReviewsList = () => {
   const [reviews, setReviews] = useState([]);
+  const API_URL= process.env.BACKEND_URL || "http://localhost:3000/rev"; 
 
   useEffect(() => {
-    fetch("http://localhost:3000/rev")
+    fetch(API_URL)
       .then((res) => res.json())
       .then((data) => {
         const formattedReviews = data.map((item) => ({
