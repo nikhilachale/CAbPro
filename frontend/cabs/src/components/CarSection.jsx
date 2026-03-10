@@ -1,57 +1,65 @@
 import React from "react";
-
 import Mini from "../images/mini.png";
 import Sedan from "../images/sedan.png";
 import Suv from "../images/suv.png";
 import Luxury from "../images/luxury.png";
 import CarCard from "./CarCard";
 
-const CarSection = () => {
-  const cars = [
-    {
-      title: "Mini",
-      image: Mini,
-      description: "Compact and budget-friendly rides, perfect for short distances.",
-      price: "₹10",
-      capacity: "3-4 persons",
-    },
-    {
-      title: "Sedan",
-      image: Sedan,
-      description: "Comfortable rides for small groups or families.",
-      price: "₹11",
-      capacity: "3-4 persons",
-    },
-    {
-      title: "SUV",
-      image: Suv,
-      description: "Spacious and powerful rides, ideal for long journeys.",
-      price: "₹15",
-      capacity: "5-6 persons",
-    },
-    {
-      title: "MUV",
-      image: Luxury,
-      description: "Premium rides for a luxurious experience.",
-      price: "₹14-₹18",
-      capacity: "7-8 persons",
-    },
-  ];
+const cars = [
+  {
+    title: "Mini",
+    image: Mini,
+    description: "Compact and efficient for quick city rides and solo commuting.",
+    price: "10",
+    capacity: "3-4 passengers",
+  },
+  {
+    title: "Sedan",
+    image: Sedan,
+    description: "Comfortable everyday ride for families and business travel.",
+    price: "11",
+    capacity: "3-4 passengers",
+  },
+  {
+    title: "SUV",
+    image: Suv,
+    description: "Spacious option for group travel and outstation convenience.",
+    price: "15",
+    capacity: "5-6 passengers",
+  },
+  {
+    title: "MUV",
+    image: Luxury,
+    description: "Premium comfort with extra room for long-distance trips.",
+    price: "14",
+    capacity: "7-8 passengers",
+  },
+];
 
+const CarSection = () => {
   return (
-    <section id="services" className=" my-14 py-10 px-8">
-      <h2 className="text-center text-3xl  text-[#e57c35] font-bold mb-14">Choose Your Car</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {cars.map((car, index) => (
-          <CarCard
-            key={index}
-            title={car.title}
-            image={car.image}
-            description={car.description}
-            price={car.price}
-            capacity={car.capacity} // Pass the new capacity parameter
-          />
-        ))}
+    <section id="fleet" className="page-section">
+      <div className="section-shell">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="section-kicker">Fleet options</span>
+          <h2 className="section-title">Choose the right car for your journey</h2>
+          <p className="section-subtitle mx-auto">
+            From compact cabs to premium multi-seaters, every vehicle is maintained for safety and comfort.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {cars.map((car) => (
+            <CarCard
+              key={car.title}
+              title={car.title}
+              image={car.image}
+              description={car.description}
+              price={car.price}
+              capacity={car.capacity}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

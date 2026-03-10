@@ -1,78 +1,81 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import Logo from '../images/bg.png';
-import { AnimatePresence, motion } from 'framer-motion';
+import React, { useState } from "react";
+import { Menu, X, PhoneCall } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
+import Logo from "../images/bg.png";
+
+const navItems = [
+  { label: "Home", to: "/", end: true },
+  { label: "Reviews", to: "/reviews" },
+  { label: "Contact", to: "/contact" },
+];
+
+const navLinkClass = ({ isActive }) =>
+  `text-sm font-semibold transition-colors duration-200 ${
+    isActive ? "text-orange-600" : "text-slate-700 hover:text-orange-600"
+  }`;
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
- 
-
 
   return (
-    <motion.header
-      initial={{ y: -60, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 1.3, duration: 1 }}
-      className="fixed w-full z-50 transition-all duration-300 bg-white shadow-md py-2"
-    >
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/">
-              <img src={Logo} alt="Company Logo" className="h-10 sm:h-12 md:h-14 w-auto" />
-            </Link>
-          </div>
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/70 bg-white/85 backdrop-blur-md">
+      <div className="section-shell">
+        <div className="flex h-20 items-center justify-between">
+          <Link to="/" className="flex items-center gap-3" aria-label="TheCabBro Home">
+            <img src={Logo} alt="TheCabBro" className="h-11 w-auto" />
+            
+          </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center space-x-4">
-            <Link
-              to="/contact"
-              className="bg-[#e57c35] text-gray-900 font-semibold px-5 py-2 rounded-full hover:bg-orange-400 transition-colors duration-200 shadow-sm"
-            >
-              Book Now
-            </Link>
+          <nav className="hidden items-center gap-8 md:flex">
+            {navItems.map((item) => (
+              <NavLink key={item.to} to={item.to} end={item.end} className={navLinkClass}>
+                {item.label}
+              </NavLink>
+            ))}
           </nav>
 
-          {/* Mobile Menu Toggle */}
-          <div className="md:hidden flex items-center">
-            <button 
-              onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 rounded-md focus:outline-none 
-                'text-gray-800'
-              }`}
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+          <div className="hidden md:block">
+            <a href="tel:+919111034494" className="btn-primary gap-2">
+              <PhoneCall className="h-4 w-4" />
+              Call Now
+            </a>
           </div>
+
+          <button
+            type="button"
+            className="inline-flex rounded-lg border border-slate-200 p-2 text-slate-700 md:hidden"
+            onClick={() => setIsOpen((prev) => !prev)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+          >
+            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
       </div>
 
-      {/* Mobile Nav */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ y: -40, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -40, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden bg-white shadow-xl absolute top-full left-0 w-full z-50"
-          >
-            <div className="px-4 pt-4 pb-4">
-              <Link
-                to="/contact"
-                className="block w-full text-center bg-[#e57c35] text-gray-900 font-semibold px-5 py-2 rounded-full hover:bg-orange-400 transition-colors duration-200 shadow-sm"
-                onClick={() => setIsOpen(false)}
-              >
-                Book Now
-              </Link>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.header>
+      {isOpen && (
+        <div className="border-t border-slate-200 bg-white md:hidden">
+          <div className="section-shell py-4">
+            <nav className="flex flex-col gap-3">
+              {navItems.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  end={item.end}
+                  className={navLinkClass}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+            </nav>
+            <a href="tel:+919111034494" className="btn-primary mt-4 w-full gap-2">
+              <PhoneCall className="h-4 w-4" />
+              Call Now
+            </a>
+          </div>
+        </div>
+      )}
+    </header>
   );
 };
 

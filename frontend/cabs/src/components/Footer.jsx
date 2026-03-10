@@ -1,39 +1,41 @@
 import React from "react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-orange-400/40 to-orange-50 text-gray-800 py-12">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* First Section: Get in Touch and CABBro */}
-        <div className="flex flex-col sm:flex-row justify-between mb-8">
+    <footer className="mt-16 border-t border-slate-200 bg-slate-950 text-slate-200">
+      <div className="section-shell py-12">
+        <div className="grid gap-8 md:grid-cols-[1.1fr_1fr]">
           <div>
-            <h3 className="text-2xl font-semibold mb-4 text-[#e57c35]">Get in Touch</h3>
-            <p className="text-gray-700 mb-2">Email us at:</p>
-            <p className="text-orange-600">
-              <a href="mailto:thebrocabs@gmail.com">thecabbro@gmail.com</a>
-            </p>
-            <p className="text-gray-700 mb-2 mt-4">Call us at:</p>
-            <p className="text-orange-600">
-              <a href="tel:+919111034494">+919111034494</a>
-            </p>
-            <p className="text-gray-700 mb-2 mt-4">Address</p>
-            <p className="text-orange-600">
-              <a href="https://www.thecabbro.com">76, Greater Tirupati Apartment, Geeta Bhawan, Indore, 452001</a>
+            <h3 className="text-xl font-extrabold text-white">THE CAB BRO</h3>
+            <p className="mt-3 max-w-lg text-sm leading-relaxed text-slate-400">
+              Reliable and comfortable cab services for city commutes and outstation trips. We prioritize punctuality,
+              safety, and a smooth customer experience.
             </p>
           </div>
-          <div className="sm:ml-auto mt-6 sm:mt-0 w-full sm:w-1/3 text-left">
-            <h3 className="text-lg font-semibold mb-3 text-[#e57c35]">
-              <a href="https://www.thecabbro.com/">THE CAB BRO</a>
-            </h3>
-            <p className="text-sm text-gray-700">
-              <strong>"TheCabBro"</strong> offers affordable, reliable, and comfortable cab services for city and long-distance travel. With a well-maintained fleet and professional drivers, we ensure every ride is safe and pleasant, prioritizing customer satisfaction at every step.
+
+          <div className="space-y-3 text-sm">
+            <p className="flex items-center gap-2 text-slate-300">
+              <Mail className="h-4 w-4 text-orange-400" />
+              <a href="mailto:thecabbro@gmail.com" className="hover:text-white">
+                thecabbro@gmail.com
+              </a>
+            </p>
+            <p className="flex items-center gap-2 text-slate-300">
+              <Phone className="h-4 w-4 text-orange-400" />
+              <a href="tel:+919111034494" className="hover:text-white">
+                +91 9111034494
+              </a>
+            </p>
+            <p className="flex items-start gap-2 text-slate-300">
+              <MapPin className="mt-0.5 h-4 w-4 text-orange-400" />
+              76, Greater Tirupati Apartment, Geeta Bhawan, Indore, 452001
             </p>
           </div>
         </div>
 
-        {/* Footer Bottom */}
-        <div className="text-center text-gray-500 mt-8">
-          <p>&copy; 2024 TheCabBro. All rights reserved.</p>
+        <div className="mt-8 border-t border-slate-800 pt-5 text-xs text-slate-500 sm:text-sm">
+          <p>&copy; {new Date().getFullYear()} TheCabBro. All rights reserved.</p>
         </div>
       </div>
     </footer>

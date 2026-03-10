@@ -1,28 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import { FaCarSide } from 'react-icons/fa';
+import React, { useEffect, useState } from "react";
+import { FaCarSide } from "react-icons/fa";
 
 const CarLoader = () => {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShow(false), 1500);
+    const timer = setTimeout(() => setShow(false), 1200);
     return () => clearTimeout(timer);
   }, []);
 
-  if (!show) return null;
+  if (!show) {
+    return null;
+  }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
-      <div className="relative w-full max-w-[400px] h-24 overflow-hidden">
-        
-        {/* Static gray road */}
-        <div className="absolute top-1/2 left-0 w-full h-1 bg-gray-300 transform -translate-y-1/2 z-0" />
-
-        {/* Blue progress line */}
-        <div className="absolute top-1/2 left-0 h-1 bg-[#e57c35] z-10 transform -translate-y-1/2 animate-line-grow origin-left" />
-
-        {/* Moving Car */}
-        <FaCarSide className="text-[#e57c35] text-5xl absolute z-20 animate-car-move" />
+    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-white/95 backdrop-blur-sm">
+      <div className="relative h-24 w-full max-w-[420px] overflow-hidden px-4">
+        <div className="absolute left-4 right-4 top-1/2 h-1 -translate-y-1/2 rounded-full bg-slate-200" />
+        <div className="absolute left-4 top-1/2 h-1 -translate-y-1/2 rounded-full bg-orange-500 animate-line-grow" />
+        <FaCarSide className="absolute z-20 text-5xl text-orange-500 animate-car-move" />
       </div>
     </div>
   );

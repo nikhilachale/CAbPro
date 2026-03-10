@@ -1,33 +1,34 @@
 import React from "react";
-import AboutImage from "../images/bg.png"; 
+import AboutImage from "../images/bg.png";
 
 const AboutUs = () => {
   return (
-    <section className="bg-white py-12">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center">
-        {/* Left Side: Image */}
-        <div className="md:w-1/2 flex justify-center md:justify-start">
-          <img
-            src={AboutImage}
-            alt="About TheCabBro"
-            className="w-2/3 max-w-sm"
-          />
-        </div>
+    <section className="page-section">
+      <div className="section-shell">
+        <div className="card-surface grid items-center gap-8 overflow-hidden p-6 sm:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:p-10">
+          <div className="flex justify-center">
+            <img src={AboutImage} alt="TheCabBro" className="h-auto w-56 max-w-full sm:w-72" />
+          </div>
 
-        {/* Right Side: Heading and Paragraph */}
-        <div className="md:w-1/2 mt-8 md:mt-0 md:ml-8">
-          <h2 className="text-3xl font-bold mb-4 bg-[#e57c35] bg-clip-text text-transparent">
-            About Us
-          </h2>
-          <p className="text-lg 	leading-loose bg-[#e57c35] bg-clip-text text-transparent">
-            Welcome to <strong>TheCabBro</strong>, your trusted travel partner 
-            committed to providing affordable, comfortable, and reliable cab 
-            services. Whether you’re traveling within the city or planning a 
-            long-distance journey, our fleet of well-maintained vehicles and 
-            professional drivers ensure a safe and pleasant experience. 
-            Customer satisfaction is at the core of everything we do, and we 
-            strive to make every ride with us a memorable one.
-          </p>
+          <div>
+            <span className="section-kicker">About TheCabBro</span>
+            <h2 className="section-title">Trusted cab partner for city and outstation travel</h2>
+            <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
+              We provide affordable, comfortable, and dependable cab services with a focus on safety and punctuality.
+              Our experienced drivers and maintained fleet ensure a smooth ride for every customer.
+            </p>
+
+            <div className="mt-6 grid grid-cols-2 gap-3 sm:max-w-md">
+              <div className="rounded-xl border border-orange-200 bg-orange-50 p-3">
+                <p className="text-xl font-extrabold text-orange-700">24/7</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-orange-700/80">Support</p>
+              </div>
+              <div className="rounded-xl border border-orange-200 bg-orange-50 p-3">
+                <p className="text-xl font-extrabold text-orange-700">1000+</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-orange-700/80">Happy riders</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,42 +1,28 @@
-
-
 import React from "react";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
-import CarSection from "./components/CarSection";
 import ServicesSection from "./components/ServiceSection";
-// import PlacesContainer from "./components/PlacesContainer";
-import Footer from "./components/Footer";
+import CarSection from "./components/CarSection";
+import PlacesContainer from "./components/PlacesContainer";
 import AboutUs from "./components/AboutUs";
-import ReviewsPage from "./components/ ReviewsPage";
+import ReviewsPage from "./components/ReviewsPage";
 import ContactInfo from "./components/ContactInfo";
-import Whatsapp from "./components/Whatsapp";
-
-
-
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="min-h-screen">
       <Header />
       <HeroSection />
-      <ServicesSection/>
+      <ServicesSection />
       <CarSection />
-
-      <PlacesContainer/>
-      <AboutUs/>
-
-     <ReviewsPage/>
-     <ContactInfo/>
-
-   
-      
-      <Footer/>
+      <PlacesContainer />
+      <AboutUs />
+      <ReviewsPage />
+      <ContactInfo />
+      <Footer />
     </div>
   );
 }
 
 export default App;
-
-
-

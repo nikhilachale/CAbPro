@@ -1,158 +1,121 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Star, User } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
+const testimonials = [
+  {
+    id: 1,
+    name: "Ananya Sharma",
+    location: "Delhi",
+    rating: 5,
+    comment:
+      "TheCabBro service is extremely reliable and affordable. Booking a cab even in peak hours has never been this easy.",
+  },
+  {
+    id: 2,
+    name: "Raj Patel",
+    location: "Ahmedabad",
+    rating: 4,
+    comment:
+      "Smooth booking process, polite drivers, and very clean vehicles. Great support from the team whenever needed.",
+  },
+  {
+    id: 3,
+    name: "Meera Nair",
+    location: "Kochi",
+    rating: 5,
+    comment:
+      "Transparent pricing, no hidden charges, and safe rides always. I use TheCabBro for all my frequent travel.",
+  },
+  {
+    id: 4,
+    name: "Vikram Singh",
+    location: "Jaipur",
+    rating: 5,
+    comment:
+      "Professional drivers, timely pickups, and smooth long-distance rides. Consistently dependable service.",
+  },
+];
 
 const Testimonial = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: "Ananya Sharma",
-      location: "Delhi",
-      image: "https://randomuser.me/api/portraits/women/65.jpg",
-      rating: 5,
-      comment:
-        "TheCabBro service is extremely reliable and affordable. Booking a cab even in peak hours has never been this easy. Highly recommended!",
-    },
-    {
-      id: 2,
-      name: "Raj Patel",
-      location: "Ahmedabad",
-      image: "https://randomuser.me/api/portraits/men/51.jpg",
-      rating: 4,
-      comment:
-        "Smooth booking process, polite drivers, and very clean vehicles. The app interface is simple and user-friendly. Great job by the team!",
-    },
-    {
-      id: 3,
-      name: "Meera Nair",
-      location: "Kochi",
-      image: "https://randomuser.me/api/portraits/women/45.jpg",
-      rating: 5,
-      comment:
-        "I travel frequently and TheCabBro has become my go-to app. Fixed pricing, no hidden charges, and safe rides always.",
-    },
-    {
-      id: 4,
-      name: "Vikram Singh",
-      location: "Jaipur",
-      image: "https://randomuser.me/api/portraits/men/64.jpg",
-      rating: 5,
-      comment:
-        "Professional drivers, quick customer support, and timely service. TheCabBro truly raises the bar for cab services in India.",
-    },
-  ];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
-  const [currentIdx, setCurrentIdx] = useState(0);
- const navigate = useNavigate();
- const handleAddReviewClick = () => {
-  
- 
-    navigate('/reviews');
- 
-};
+  const next = () => setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  const prev = () => setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
-  const nextTestimonial = () => {
-    setCurrentIdx((prevIdx) => (prevIdx + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentIdx((prevIdx) => (prevIdx - 1 + testimonials.length) % testimonials.length);
-  };
+  const active = testimonials[currentIndex];
 
   return (
-    <section className="py-20 bg-gray-900 text-white relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute top-0 left-0 right-0 bottom-0 opacity-10">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-            backgroundRepeat: "repeat"
-          }}
-        ></div>
-      </div>
-
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            What Our <span className="text-[#e57c35]">Riders Say</span>
-          </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            Don't just take our word for it – hear from our satisfied customers.
+    <section className="page-section bg-slate-950 text-slate-100">
+      <div className="section-shell">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="section-kicker border-orange-300 bg-orange-100/95 text-orange-700">Client feedback</span>
+          <h2 className="section-title text-white">What our riders say</h2>
+          <p className="mt-3 text-sm text-slate-300 sm:text-base">
+            Real experiences from customers who trust us for local and outstation travel.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          {/* Testimonial cards */}
-          <div className="relative overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIdx * 100}%)` }}
-            >
-              {testimonials.map((testimonial) => (
-                <div key={testimonial.id} className="min-w-full px-4">
-                  <div className="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700">
-                    <div className="flex items-center mb-6">
-                      <div className="w-16 h-16 mr-4 rounded-full bg-gray-700 flex items-center justify-center border-2 border-[#e57c35]">
-                        <User className="w-10 h-10 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-semibold">{testimonial.name}</h3>
-                        <p className="text-gray-400">{testimonial.location}</p>
-                        <div className="flex mt-1">
-                          {[...Array(5)].map((_, i) => (
-                            <Star
-                              key={i}
-                              className={`w-4 h-4 ${i < testimonial.rating ? 'text-[#e57c35]' : 'text-gray-600'}`}
-                              fill={i < testimonial.rating ? 'currentColor' : 'none'}
-                            />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                    <p className="text-gray-300 italic">"{testimonial.comment}"</p>
-                  </div>
-                </div>
-              ))}
+        <div className="mx-auto mt-10 max-w-4xl">
+          <article className="rounded-3xl border border-slate-800 bg-slate-900/85 p-6 shadow-2xl sm:p-8">
+            <Quote className="h-8 w-8 text-orange-400" />
+            <p className="mt-4 text-base leading-relaxed text-slate-200 sm:text-lg">"{active.comment}"</p>
+
+            <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-slate-800 pt-5">
+              <div>
+                <h3 className="text-lg font-bold text-white">{active.name}</h3>
+                <p className="text-sm text-slate-400">{active.location}</p>
+              </div>
+              <div className="flex items-center gap-1">
+                {Array.from({ length: 5 }).map((_, idx) => (
+                  <Star
+                    key={`${active.id}-${idx}`}
+                    className={`h-4 w-4 ${idx < active.rating ? "text-orange-400" : "text-slate-600"}`}
+                    fill={idx < active.rating ? "currentColor" : "none"}
+                  />
+                ))}
+              </div>
             </div>
+          </article>
+
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <button
+              type="button"
+              onClick={prev}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-700 text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            {testimonials.map((item, idx) => (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => setCurrentIndex(idx)}
+                aria-label={`Go to testimonial ${idx + 1}`}
+                className={`h-2.5 w-2.5 rounded-full transition ${
+                  idx === currentIndex ? "bg-orange-400" : "bg-slate-700 hover:bg-slate-500"
+                }`}
+              />
+            ))}
+            <button
+              type="button"
+              onClick={next}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-700 text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
           </div>
 
-          {/* Navigation buttons */}
-          <div className="flex justify-center mt-8 space-x-3">
-            <button
-              onClick={prevTestimonial}
-              className="bg-gray-800 text-white p-3 rounded-full hover:bg-[#e57c35] hover:text-gray-900 transition-colors duration-200"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <div className="flex space-x-2 items-center">
-              {testimonials.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrentIdx(idx)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${currentIdx === idx ? 'bg-[#e57c35]' : 'bg-gray-600 hover:bg-gray-500'
-                    }`}
-                  aria-label={`Go to testimonial ${idx + 1}`}
-                />
-              ))}
-            </div>
-            <button
-              onClick={nextTestimonial}
-              className="bg-gray-800 text-white p-3 rounded-full hover:bg-[#e57c35] hover:text-gray-900 transition-colors duration-200"
-            >
-              <ChevronRight className="w-5 h-5" />
+          <div className="mt-8 text-center">
+            <button type="button" onClick={() => navigate("/reviews")} className="btn-primary">
+              Add Your Review
             </button>
           </div>
         </div>
-
-        <div className="mt-10 flex justify-center">
-  
-</div>
-
       </div>
-     
-
     </section>
   );
 };
