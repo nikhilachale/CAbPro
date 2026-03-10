@@ -5,12 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Cab Booking in Indore | TheCabBro Taxi Service</title>
+  <title>Cab Booking in Indore | Local, Airport & Outstation Taxis</title>
   <meta name="description"
-    content="TheCabBro offers cab booking in Indore for local rides, airport transfers, and outstation taxi trips with professional drivers and transparent fares." />
+    content="Book local, airport, and outstation cabs in Indore with TheCabBro. Verified drivers, clean cars, transparent fares, 24/7 support." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#f97316" />
-<meta name="keywords" content="cab booking Indore, taxi service Indore, airport taxi Indore, outstation cab Indore, TheCabBro">
+  <meta name="keywords"
+    content="cab booking Indore, taxi service Indore, airport taxi Indore, outstation cab Indore, TheCabBro">
   <meta name="author" content="TheCabBro">
   <meta name="publisher" content="TheCabBro">
   <link rel="modulepreload" href="/src/main.jsx">
@@ -40,16 +41,16 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="TheCabBro" />
-  <meta property="og:title" content="Cab Booking in Indore | TheCabBro Taxi Service" />
+  <meta property="og:title" content="Cab Booking in Indore | Local, Airport & Outstation Taxis" />
   <meta property="og:description"
-    content="TheCabBro offers cab booking in Indore for local rides, airport transfers, and outstation taxi trips with professional drivers and transparent fares." />
+    content="Book local, airport, and outstation cabs in Indore with TheCabBro. Verified drivers, clean cars, transparent fares, 24/7 support." />
   <meta property="og:url" content="https://www.thecabbro.com/" />
   <meta property="og:image" content="https://www.thecabbro.com/images/hero-1280.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Cab Booking in Indore | TheCabBro Taxi Service" />
+  <meta name="twitter:title" content="Cab Booking in Indore | Local, Airport & Outstation Taxis" />
   <meta name="twitter:description"
-    content="TheCabBro offers cab booking in Indore for local rides, airport transfers, and outstation taxi trips with professional drivers and transparent fares." />
+    content="Book local, airport, and outstation cabs in Indore with TheCabBro. Verified drivers, clean cars, transparent fares, 24/7 support." />
   <meta name="twitter:image" content="https://www.thecabbro.com/images/hero-1280.jpg" />
 
   <script type="application/ld+json">
@@ -73,39 +74,165 @@
       },
       "sameAs": [
         "https://www.instagram.com/thecabbro.co/",
-        "https://www.facebook.com/thecab.bro/"
-      ]
+        "https://www.facebook.com/thecab.bro/",
+        "https://www.youtube.com/",
+        "https://x.com/",
+        "https://www.linkedin.com/"
+      ],
+      "@type":"FAQPage",
+ "mainEntity":[
+ {
+ "@type":"Question",
+ "name":"How to book a cab in Indore?",
+ "acceptedAnswer":{
+ "@type":"Answer",
+ "text":"You can book a cab in Indore through TheCabBro website or WhatsApp."
+ }
+ }
+ ]
     }
   </script>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EQMYDNPEZC"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() {
+    window.gtag = function gtag() {
       dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "G-EQMYDNPEZC");
+    };
+
+    const startAnalytics = () => {
+      const analyticsScript = document.createElement("script");
+      analyticsScript.src = "https://www.googletagmanager.com/gtag/js?id=G-EQMYDNPEZC";
+      analyticsScript.async = true;
+      analyticsScript.onload = () => {
+        gtag("js", new Date());
+        gtag("config", "G-EQMYDNPEZC");
+      };
+      document.head.appendChild(analyticsScript);
+    };
+
+    window.addEventListener(
+      "load",
+      () => {
+        if ("requestIdleCallback" in window) {
+          window.requestIdleCallback(startAnalytics, { timeout: 3000 });
+          return;
+        }
+        setTimeout(startAnalytics, 1500);
+      },
+      { once: true }
+    );
   </script>
 </head>
 
 <body>
   <div id="root">
-    <main style="padding: 1rem; font-family: Manrope, Segoe UI, sans-serif;">
+    <main
+      style="max-width: 72rem; margin: 0 auto; padding: 1.25rem; font-family: Manrope, Segoe UI, sans-serif; color: #0f172a; line-height: 1.65;">
       <h1>Cab Booking in Indore with TheCabBro</h1>
-      <p>Book local cabs, airport taxi rides, and outstation trips in Indore with verified drivers.</p>
-      <nav aria-label="Quick links" style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
-        <a href="/">Home</a>
-        <a href="/contact">Contact</a>
-        <a href="/reviews">Reviews</a>
-        <a href="/#services">Services</a>
-        <a href="/#fleet">Fleet</a>
-        <a href="/#places">Routes</a>
+      <p style="font-size: 1rem;">
+        TheCabBro is a trusted taxi service in Indore for local city travel, airport transfers, and outstation cab
+        routes. Our team focuses on safe rides, verified drivers, responsive support, and transparent billing so you
+        can plan travel without last-minute uncertainty.
+      </p>
+
+      <nav aria-label="Quick links" style="display: flex; flex-wrap: wrap; gap: 0.625rem; margin: 1rem 0 1.25rem;">
+        <a href="/"
+          style="padding: 0.6rem 0.9rem; border: 1px solid #cbd5e1; border-radius: 0.7rem; color: #0f172a; text-decoration: none;">Home</a>
+        <a href="/contact"
+          style="padding: 0.6rem 0.9rem; border: 1px solid #cbd5e1; border-radius: 0.7rem; color: #0f172a; text-decoration: none;">Contact</a>
+        <a href="/reviews"
+          style="padding: 0.6rem 0.9rem; border: 1px solid #cbd5e1; border-radius: 0.7rem; color: #0f172a; text-decoration: none;">Reviews</a>
+        <a href="/#services"
+          style="padding: 0.6rem 0.9rem; border: 1px solid #cbd5e1; border-radius: 0.7rem; color: #0f172a; text-decoration: none;">Services</a>
+        <a href="/#fleet"
+          style="padding: 0.6rem 0.9rem; border: 1px solid #cbd5e1; border-radius: 0.7rem; color: #0f172a; text-decoration: none;">Fleet</a>
+        <a href="/#places"
+          style="padding: 0.6rem 0.9rem; border: 1px solid #cbd5e1; border-radius: 0.7rem; color: #0f172a; text-decoration: none;">Routes</a>
       </nav>
-      <p style="margin-top: 0.75rem;">
-        <a href="https://www.instagram.com/thecabbro.co/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        |
-        <a href="https://www.facebook.com/thecab.bro/" target="_blank" rel="noopener noreferrer">Facebook</a>
+
+      <section aria-labelledby="cab-services-overview">
+        <h2 id="cab-services-overview">Cab Services in Indore for Daily and Long-Distance Travel</h2>
+        <p>
+          Our service covers the full range of practical travel needs in and around Indore. For daily city movement,
+          we support office commute rides, market runs, personal appointments, and time-sensitive meetings. For family
+          travel, we provide comfortable options for school drop schedules, railway station transfers, and flexible
+          half-day or full-day bookings. For one-way intercity journeys, we offer route-focused pricing so customers do
+          not pay unnecessary return costs. For round trips, we provide scheduling support that helps with temple
+          visits,
+          sightseeing stops, meal breaks, and return timing, especially for routes where traffic and local events can
+          delay standard travel plans.
+        </p>
+        <h3>Local City Cab Coverage</h3>
+        <p>
+          Indore traffic patterns can change quickly during business hours, festival periods, and weekend evenings. Our
+          drivers are trained to plan alternate routes, coordinate pickup location details over call, and reduce wait
+          times through clear communication before the ride starts. We serve residential areas, business hubs,
+          hospitals,
+          schools, and transit points with reliable arrival updates. This helps riders avoid confusion at busy pickup
+          points and improves overall travel predictability.
+        </p>
+        <h3>Airport and Railway Transfers</h3>
+        <h4>Pickup Coordination and Timing</h4>
+        <p>
+          For Devi Ahilya Bai Holkar Airport and major station drop-offs, timing accuracy is critical. We recommend
+          booking in advance and sharing flight or train time so our team can align pickup with expected reporting
+          windows. For airport pickups, driver coordination includes terminal-side communication and luggage support.
+          For station pickups, we help confirm gate-side meeting points to avoid delays in crowded zones.
+        </p>
+      </section>
+
+      <section aria-labelledby="routes-pricing" style="margin-top: 1.1rem;">
+        <h2 id="routes-pricing">Outstation Routes, Fare Clarity, and Cab Type Selection</h2>
+        <h3>Popular Indore Outstation Destinations</h3>
+        <p>
+          Regularly requested routes include Ujjain, Omkareshwar, Maheshwar, Patalpani, and nearby district routes for
+          personal, family, and pilgrimage travel. Our fleet includes Mini, Sedan, SUV, and MUV categories so riders can
+          match budget, passenger count, and luggage requirements. Customers traveling with elders or children often
+          prefer higher-space options for comfort and easier boarding.
+        </p>
+        <h4>What Is Included in Fare Communication</h4>
+        <p>
+          We prioritize transparent pricing details before booking confirmation. Riders receive clear information about
+          the selected car segment, trip type, and core charge structure. This process reduces confusion and supports
+          better comparison when users evaluate multiple cab options online.
+        </p>
+        <h3>Safety and Service Standards</h3>
+        <p>
+          Safety is built through vehicle upkeep, experienced drivers, and responsible trip handling. We focus on clean
+          interiors, polite behavior, and practical support during route changes or stop additions. Our goal is to keep
+          each ride dependable for solo passengers, families, and business travelers alike.
+        </p>
+      </section>
+
+      <section aria-labelledby="booking-support" style="margin-top: 1.1rem;">
+        <h2 id="booking-support">How to Book and Get Quick Support</h2>
+        <h3>Simple Booking Flow</h3>
+        <p>
+          To request a ride, share name, mobile number, pickup location, drop location, preferred date, and cab type.
+          Our team confirms availability, schedules driver coordination, and responds quickly to booking questions.
+          For urgent plans, direct calling gives the fastest response.
+        </p>
+        <h4>Business and Family Use Cases</h4>
+        <p>
+          Corporate users rely on punctual pickup windows and cleaner billing communication, while family users
+          prioritize
+          comfort and service reliability. TheCabBro supports both with practical booking guidance and route-aware
+          driver
+          planning.
+        </p>
+      </section>
+
+      <p style="margin-top: 1rem; font-size: 1rem;">
+        Follow TheCabBro:
+        <a href="https://www.instagram.com/thecabbro.co/" target="_blank" rel="noopener noreferrer"
+          style="margin-left: 0.45rem;">Instagram</a>,
+        <a href="https://www.facebook.com/thecab.bro/" target="_blank" rel="noopener noreferrer"
+          style="margin-left: 0.45rem;">Facebook</a>,
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
+          style="margin-left: 0.45rem;">YouTube</a>,
+        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" style="margin-left: 0.45rem;">X</a>,
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
+          style="margin-left: 0.45rem;">LinkedIn</a>
       </p>
     </main>
     <noscript>

@@ -85,7 +85,7 @@ const Testimonial = () => {
             <button
               type="button"
               onClick={prev}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-700 text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="h-5 w-5" />
@@ -96,15 +96,19 @@ const Testimonial = () => {
                 type="button"
                 onClick={() => setCurrentIndex(idx)}
                 aria-label={`Go to testimonial ${idx + 1}`}
-                className={`h-2.5 w-2.5 rounded-full transition ${
-                  idx === currentIndex ? "bg-orange-400" : "bg-slate-700 hover:bg-slate-500"
+                className={`inline-flex h-10 w-10 items-center justify-center rounded-full border transition ${
+                  idx === currentIndex
+                    ? "border-orange-400/70 bg-orange-400/15"
+                    : "border-slate-700/80 bg-transparent hover:border-slate-500"
                 }`}
-              />
+              >
+                <span className={`h-2.5 w-2.5 rounded-full ${idx === currentIndex ? "bg-orange-400" : "bg-slate-600"}`} />
+              </button>
             ))}
             <button
               type="button"
               onClick={next}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-700 text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
               aria-label="Next testimonial"
             >
               <ChevronRight className="h-5 w-5" />

@@ -10,8 +10,8 @@ const navItems = [
 ];
 
 const navLinkClass = ({ isActive }) =>
-  `text-sm font-semibold transition-colors duration-200 ${
-    isActive ? "text-orange-600" : "text-slate-700 hover:text-orange-600"
+  `inline-flex min-h-11 items-center rounded-lg px-3 py-2 text-sm font-semibold transition-colors duration-200 ${
+    isActive ? "bg-orange-50 text-orange-600" : "text-slate-700 hover:bg-orange-50 hover:text-orange-600"
   }`;
 
 const Header = () => {
@@ -57,7 +57,7 @@ const Header = () => {
 
           <button
             type="button"
-            className="inline-flex rounded-lg border border-slate-200 p-2 text-slate-700 md:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-slate-200 text-slate-700 md:hidden"
             onClick={toggleMenu}
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
@@ -69,7 +69,7 @@ const Header = () => {
       {isOpen && (
         <div className="border-t border-slate-200 bg-white md:hidden">
           <div className="section-shell py-4">
-            <nav className="flex flex-col gap-3">
+            <nav className="flex flex-col gap-2">
               {navItems.map((item) => (
                 <NavLink
                   key={item.to}

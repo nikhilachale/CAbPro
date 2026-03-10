@@ -33,7 +33,7 @@ body {
   }
 
   .section-kicker {
-    @apply inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-orange-700;
+    @apply inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-3 py-1.5 text-sm font-semibold uppercase tracking-[0.18em] text-orange-700;
   }
 
   .section-title {
@@ -49,11 +49,11 @@ body {
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-xl bg-orange-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-orange-500/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-orange-600;
+    @apply inline-flex min-h-11 items-center justify-center rounded-xl bg-orange-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-orange-500/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-orange-600;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-orange-300 hover:text-orange-700;
+    @apply inline-flex min-h-11 items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-orange-300 hover:text-orange-700;
   }
 
   .field-label {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Facebook, Youtube, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -33,12 +33,12 @@ const Footer = () => {
             </p>
             <div className="pt-2">
               <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Follow us</p>
-              <div className="flex items-center gap-4">
+              <div className="flex flex-wrap items-center gap-3">
                 <a
                   href="https://www.instagram.com/thecabbro.co/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-slate-300 hover:text-white"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-lg px-2 text-slate-300 hover:bg-slate-900 hover:text-white"
                   aria-label="TheCabBro Instagram"
                 >
                   <Instagram className="h-4 w-4 text-orange-400" />
@@ -48,11 +48,41 @@ const Footer = () => {
                   href="https://www.facebook.com/thecab.bro/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-slate-300 hover:text-white"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-lg px-2 text-slate-300 hover:bg-slate-900 hover:text-white"
                   aria-label="TheCabBro Facebook"
                 >
                   <Facebook className="h-4 w-4 text-orange-400" />
                   Facebook
+                </a>
+                <a
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-lg px-2 text-slate-300 hover:bg-slate-900 hover:text-white"
+                  aria-label="TheCabBro YouTube"
+                >
+                  <Youtube className="h-4 w-4 text-orange-400" />
+                  YouTube
+                </a>
+                <a
+                  href="https://x.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-lg px-2 text-slate-300 hover:bg-slate-900 hover:text-white"
+                  aria-label="TheCabBro X"
+                >
+                  <Twitter className="h-4 w-4 text-orange-400" />
+                  X
+                </a>
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-lg px-2 text-slate-300 hover:bg-slate-900 hover:text-white"
+                  aria-label="TheCabBro LinkedIn"
+                >
+                  <Linkedin className="h-4 w-4 text-orange-400" />
+                  LinkedIn
                 </a>
               </div>
             </div>

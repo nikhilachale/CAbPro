@@ -23,6 +23,7 @@ const Form = () => {
     cabType: "",
   });
   const [submitting, setSubmitting] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,10 +32,11 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setStatusMessage("");
     setSubmitting(true);
     setTimeout(() => {
       setSubmitting(false);
-      window.alert("Booking request submitted. Our team will call you shortly.");
+      setStatusMessage("Booking request submitted. Our team will call you shortly.");
     }, 1000);
   };
 
@@ -74,6 +76,9 @@ const Form = () => {
             onChange={handleChange}
             className="input-surface"
             placeholder="10-digit mobile number"
+            inputMode="numeric"
+            pattern="[0-9]{10}"
+            maxLength={10}
             required
           />
         </div>
@@ -146,7 +151,7 @@ const Form = () => {
                     value={cab.name}
                     checked={selected}
                     onChange={handleChange}
-                    className="hidden"
+                    className="sr-only"
                   />
                   <img
                     src={cab.image}
@@ -157,7 +162,7 @@ const Form = () => {
                     decoding="async"
                     className="mx-auto h-10 w-10 object-contain"
                   />
-                  <span className="mt-2 block text-xs font-semibold sm:text-sm">{cab.name}</span>
+                  <span className="mt-2 block text-sm font-semibold">{cab.name}</span>
                 </label>
               );
             })}
@@ -167,6 +172,11 @@ const Form = () => {
         <button type="submit" disabled={submitting} className="btn-primary w-full rounded-xl py-3 text-base">
           {submitting ? "Submitting..." : "Request Booking"}
         </button>
+        {statusMessage && (
+          <p className="rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm font-medium text-emerald-700" aria-live="polite">
+            {statusMessage}
+          </p>
+        )}
       </form>
     </div>
   );

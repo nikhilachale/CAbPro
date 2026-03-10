@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 const ServicesSection = lazy(() => import("./components/ServiceSection"));
 const CarSection = lazy(() => import("./components/CarSection"));
 const PlacesContainer = lazy(() => import("./components/PlacesContainer"));
+const SeoContentSection = lazy(() => import("./components/SeoContentSection"));
 const Testimonial = lazy(() => import("./components/Testimonial"));
 const AboutUs = lazy(() => import("./components/AboutUs"));
 const Whatsapp = lazy(() => import("./components/Whatsapp"));
@@ -25,6 +26,7 @@ function Home() {
         <ServicesSection />
         <CarSection />
         <PlacesContainer />
+        <SeoContentSection />
         <Testimonial />
         <AboutUs />
         <Whatsapp />
