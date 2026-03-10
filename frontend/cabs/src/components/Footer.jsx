@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -31,6 +31,31 @@ const Footer = () => {
               <MapPin className="mt-0.5 h-4 w-4 text-orange-400" />
               76, Greater Tirupati Apartment, Geeta Bhawan, Indore, 452001
             </p>
+            <div className="pt-2">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Follow us</p>
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://www.instagram.com/thecabbro.co/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-slate-300 hover:text-white"
+                  aria-label="TheCabBro Instagram"
+                >
+                  <Instagram className="h-4 w-4 text-orange-400" />
+                  Instagram
+                </a>
+                <a
+                  href="https://www.facebook.com/thecab.bro/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-slate-300 hover:text-white"
+                  aria-label="TheCabBro Facebook"
+                >
+                  <Facebook className="h-4 w-4 text-orange-400" />
+                  Facebook
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 

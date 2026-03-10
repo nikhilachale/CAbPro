@@ -1,6 +1,6 @@
 import React from "react";
 import { CheckCircle2, Star, ShieldCheck, Clock3 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Form from "./Form";
 
 const highlights = [
@@ -16,8 +16,6 @@ const stats = [
 ];
 
 const HeroSection = () => {
-  const navigate = useNavigate();
-
   return (
     <section className="relative overflow-hidden pb-16 pt-28 md:pt-32">
       <div className="absolute inset-0 -z-10">
@@ -58,12 +56,12 @@ const HeroSection = () => {
             </div>
 
             <div className="mt-7 flex flex-wrap gap-3">
-              <button type="button" onClick={() => navigate("/contact")} className="btn-primary">
+              <Link to="/contact" className="btn-primary">
                 Book Your Ride
-              </button>
-              <button type="button" onClick={() => navigate("/reviews")} className="btn-secondary">
+              </Link>
+              <Link to="/reviews" className="btn-secondary">
                 See Reviews
-              </button>
+              </Link>
             </div>
 
             <ul className="mt-6 grid gap-2 text-sm text-slate-700 sm:grid-cols-2">
