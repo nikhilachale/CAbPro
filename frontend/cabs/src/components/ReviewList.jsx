@@ -70,7 +70,9 @@ const ReviewList = ({ reviews = [], loading = false, error = "" }) => {
             <span className="ml-1 text-xs font-semibold text-slate-500">{item.rating}/5</span>
           </div>
 
-          <p className="mt-3 text-sm leading-relaxed text-slate-600">"{item.review}"</p>
+          <p className="mt-3 text-sm leading-relaxed text-slate-600">
+            &ldquo;{item.review}&rdquo;
+          </p>
         </article>
       ))}
     </div>

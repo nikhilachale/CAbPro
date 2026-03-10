@@ -1,24 +1,36 @@
-import React from "react";
+import { Suspense, lazy, memo } from "react";
 import HeroSection from "./components/HeroSection";
-import ServicesSection from "./components/ServiceSection";
-import CarSection from "./components/CarSection";
-import PlacesContainer from "./components/PlacesContainer";
-import Testimonial from "./components/Testimonial";
-import AboutUs from "./components/AboutUs";
-import Whatsapp from "./components/Whatsapp";
+
+const ServicesSection = lazy(() => import("./components/ServiceSection"));
+const CarSection = lazy(() => import("./components/CarSection"));
+const PlacesContainer = lazy(() => import("./components/PlacesContainer"));
+const Testimonial = lazy(() => import("./components/Testimonial"));
+const AboutUs = lazy(() => import("./components/AboutUs"));
+const Whatsapp = lazy(() => import("./components/Whatsapp"));
+
+const SectionFallback = () => (
+  <section className="page-section">
+    <div className="section-shell">
+      <div className="h-28 rounded-2xl bg-slate-100" />
+    </div>
+  </section>
+);
 
 function Home() {
   return (
     <>
-      <HeroSection />
-      <ServicesSection />
-      <CarSection />
-      <PlacesContainer />
-      <Testimonial />
-      <AboutUs />
-      <Whatsapp />
+     <HeroSection />
+
+      <Suspense fallback={<SectionFallback />}>
+        <ServicesSection />
+        <CarSection />
+        <PlacesContainer />
+        <Testimonial />
+        <AboutUs />
+        <Whatsapp />
+      </Suspense>
     </>
   );
 }
 
-export default Home;
+export default memo(Home);

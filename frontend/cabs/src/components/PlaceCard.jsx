@@ -6,6 +6,11 @@ const PlaceCard = ({ image, name }) => {
       <img
         src={image}
         alt={name}
+        width="800"
+        height="560"
+        loading="lazy"
+        decoding="async"
+        sizes="(min-width: 1024px) 22vw, (min-width: 640px) 30vw, 46vw"
         className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/20 to-transparent" />

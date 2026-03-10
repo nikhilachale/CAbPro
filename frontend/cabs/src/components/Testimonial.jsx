@@ -60,7 +60,9 @@ const Testimonial = () => {
         <div className="mx-auto mt-10 max-w-4xl">
           <article className="rounded-3xl border border-slate-800 bg-slate-900/85 p-6 shadow-2xl sm:p-8">
             <Quote className="h-8 w-8 text-orange-400" />
-            <p className="mt-4 text-base leading-relaxed text-slate-200 sm:text-lg">"{active.comment}"</p>
+            <p className="mt-4 text-base leading-relaxed text-slate-200 sm:text-lg">
+              &ldquo;{active.comment}&rdquo;
+            </p>
 
             <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-slate-800 pt-5">
               <div>

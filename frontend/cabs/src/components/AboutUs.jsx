@@ -1,5 +1,5 @@
 import React from "react";
-import AboutImage from "../images/bg.png";
+import AboutImage from "../images/optimized/brand-logo.webp";
 
 const AboutUs = () => {
   return (
@@ -7,7 +7,15 @@ const AboutUs = () => {
       <div className="section-shell">
         <div className="card-surface grid items-center gap-8 overflow-hidden p-6 sm:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:p-10">
           <div className="flex justify-center">
-            <img src={AboutImage} alt="TheCabBro" className="h-auto w-56 max-w-full sm:w-72" />
+            <img
+              src={AboutImage}
+              alt="TheCabBro"
+              width="320"
+              height="132"
+              loading="lazy"
+              decoding="async"
+              className="h-auto w-56 max-w-full sm:w-72"
+            />
           </div>
 
           <div>

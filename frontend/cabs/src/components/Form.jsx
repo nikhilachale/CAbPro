@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import mini from "../images/mini logo.png";
-import muv from "../images/muv logo.png";
-import suv from "../images/suv logo.png";
-import innova from "../images/innova logo.png";
-import sedan from "../images/sedan logo.png";
+import mini from "../images/optimized/mini-logo.webp";
+import muv from "../images/optimized/muv-logo.webp";
+import suv from "../images/optimized/suv-logo.webp";
+import innova from "../images/optimized/innova-logo.webp";
+import sedan from "../images/optimized/sedan-logo.webp";
 
 const cabOptions = [
   { name: "SUV", image: suv },
@@ -148,7 +148,15 @@ const Form = () => {
                     onChange={handleChange}
                     className="hidden"
                   />
-                  <img src={cab.image} alt={cab.name} className="mx-auto h-10 w-10 object-contain" />
+                  <img
+                    src={cab.image}
+                    alt={cab.name}
+                    width="40"
+                    height="40"
+                    loading="lazy"
+                    decoding="async"
+                    className="mx-auto h-10 w-10 object-contain"
+                  />
                   <span className="mt-2 block text-xs font-semibold sm:text-sm">{cab.name}</span>
                 </label>
               );

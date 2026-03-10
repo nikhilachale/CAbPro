@@ -12,6 +12,10 @@ const CarCard = ({ title, image, description, price, capacity }) => {
         <img
           src={image}
           alt={`${title} cab`}
+          width="112"
+          height="112"
+          loading="lazy"
+          decoding="async"
           className="mx-auto h-28 w-28 object-contain transition-transform duration-300 group-hover:scale-105"
         />
 

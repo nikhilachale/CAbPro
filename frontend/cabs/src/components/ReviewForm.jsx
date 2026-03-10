@@ -48,7 +48,7 @@ const ReviewForm = ({ onReviewAdded }) => {
       if (onReviewAdded) {
         onReviewAdded(payload);
       }
-    } catch (error) {
+    } catch {
       setMessage("Network error. Please try again.");
     } finally {
       setSubmitting(false);

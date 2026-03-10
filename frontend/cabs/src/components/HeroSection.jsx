@@ -37,6 +37,26 @@ const HeroSection = () => {
               and one-way travel.
             </p>
 
+            <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200/70 bg-white shadow-[0_14px_36px_-24px_rgba(15,23,42,0.45)]">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet="/images/hero-768.webp 768w, /images/hero-1280.webp 1280w"
+                  sizes="(min-width: 1024px) 42vw, 92vw"
+                />
+                <img
+                  src="/images/hero-1280.jpg"
+                  alt="TheCabBro premium cab fleet"
+                  width="1280"
+                  height="720"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="h-44 w-full object-cover sm:h-52"
+                />
+              </picture>
+            </div>
+
             <div className="mt-7 flex flex-wrap gap-3">
               <button type="button" onClick={() => navigate("/contact")} className="btn-primary">
                 Book Your Ride

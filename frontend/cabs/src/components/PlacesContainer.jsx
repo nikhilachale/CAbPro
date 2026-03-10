@@ -1,12 +1,12 @@
 import React from "react";
 import PlaceCard from "./PlaceCard";
-import Maheshwar from "../images/maheshwar.jpg";
-import Ujjain from "../images/ujjain.jpg";
-import Omk from "../images/omkareshwar.jpg";
-import JamGate from "../images/jamgate.jpg";
-import Patalpani from "../images/patalpani.jpg";
-import Rajwada from "../images/rajwada.jpg";
-import India from "../images/india.png";
+import Maheshwar from "../images/optimized/maheshwar.webp";
+import Ujjain from "../images/optimized/ujjain.webp";
+import Omk from "../images/optimized/omkareshwar.webp";
+import JamGate from "../images/optimized/jamgate.webp";
+import Patalpani from "../images/optimized/patalpani.webp";
+import Rajwada from "../images/optimized/rajwada.webp";
+import India from "../images/optimized/india.webp";
 
 const places = [
   { name: "Maheshwar", image: Maheshwar },

@@ -1,8 +1,8 @@
 import React from "react";
-import Mini from "../images/mini.png";
-import Sedan from "../images/sedan.png";
-import Suv from "../images/suv.png";
-import Luxury from "../images/luxury.png";
+import Mini from "../images/optimized/mini.webp";
+import Sedan from "../images/optimized/sedan.webp";
+import Suv from "../images/optimized/suv.webp";
+import Luxury from "../images/optimized/luxury.webp";
 import CarCard from "./CarCard";
 
 const cars = [

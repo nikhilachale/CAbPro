@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { memo, useCallback, useEffect, useState } from "react";
 import { Menu, X, PhoneCall } from "lucide-react";
-import { Link, NavLink } from "react-router-dom";
-import Logo from "../images/bg.png";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import Logo from "../images/optimized/brand-logo.webp";
 
 const navItems = [
   { label: "Home", to: "/", end: true },
@@ -16,14 +16,28 @@ const navLinkClass = ({ isActive }) =>
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
+  const toggleMenu = useCallback(() => setIsOpen((prev) => !prev), []);
+  const closeMenu = useCallback(() => setIsOpen(false), []);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/70 bg-white/85 backdrop-blur-md">
       <div className="section-shell">
         <div className="flex h-20 items-center justify-between">
           <Link to="/" className="flex items-center gap-3" aria-label="TheCabBro Home">
-            <img src={Logo} alt="TheCabBro" className="h-11 w-auto" />
-            
+            <img
+              src={Logo}
+              alt="TheCabBro"
+              width="160"
+              height="66"
+              fetchPriority="high"
+              decoding="async"
+              className="h-11 w-auto"
+            />
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex">
@@ -44,7 +58,7 @@ const Header = () => {
           <button
             type="button"
             className="inline-flex rounded-lg border border-slate-200 p-2 text-slate-700 md:hidden"
-            onClick={() => setIsOpen((prev) => !prev)}
+            onClick={toggleMenu}
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -62,7 +76,7 @@ const Header = () => {
                   to={item.to}
                   end={item.end}
                   className={navLinkClass}
-                  onClick={() => setIsOpen(false)}
+                  onClick={closeMenu}
                 >
                   {item.label}
                 </NavLink>
@@ -79,4 +93,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);
