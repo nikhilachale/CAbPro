@@ -7,6 +7,9 @@ import Home from "./Home.jsx";
 
 const ReviewsPage = lazy(() => import("./components/ReviewsPage.jsx"));
 const ContactInfo = lazy(() => import("./components/ContactInfo.jsx"));
+const IndoreBlog = lazy(() => import("./components/IndoreBlog.jsx"));
+const IndorePlaceDetails = lazy(() => import("./components/IndorePlaces.jsx"));
+const PopularPlaceDetails = lazy(() => import("./components/PopularPlaceDetails.jsx"));
 const routeFallbackElement = (
   <div className="page-section">
     <div className="section-shell">
@@ -32,6 +35,30 @@ const router = createBrowserRouter(
         element={
           <Suspense fallback={routeFallbackElement}>
             <ContactInfo />
+          </Suspense>
+        }
+      />
+      <Route
+        path="indore"
+        element={
+          <Suspense fallback={routeFallbackElement}>
+            <IndoreBlog />
+          </Suspense>
+        }
+      />
+      <Route
+        path="indore/:slug"
+        element={
+          <Suspense fallback={routeFallbackElement}>
+            <IndorePlaceDetails />
+          </Suspense>
+        }
+      />
+      <Route
+        path="places/:slug"
+        element={
+          <Suspense fallback={routeFallbackElement}>
+            <PopularPlaceDetails />
           </Suspense>
         }
       />

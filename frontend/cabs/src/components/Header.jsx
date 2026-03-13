@@ -5,6 +5,7 @@ import Logo from "../images/optimized/brand-logo.webp";
 
 const navItems = [
   { label: "Home", to: "/", end: true },
+  { label: "Indore Guide", to: "/indore" },
   { label: "Reviews", to: "/reviews" },
   { label: "Contact", to: "/contact" },
 ];
